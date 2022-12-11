@@ -33,6 +33,11 @@
       type="text/css"
     />
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
 
   <body>
@@ -179,20 +184,19 @@
               <div class="col-lg-6">
                 <blockquote class="s1 c1">
                   <span class="b-text text-white bg-primary"
-                    >Design is not just what it looks like and feels like.
-                    Design is how it works.</span
+                    >Defining the Kuwaiti business landscape for over 2
+                    decades.</span
                   >
                 </blockquote>
               </div>
 
               <div class="col-lg-6">
                 <p class="text-dark">
-                  Culpa dolor labore enim est irure officia do dolore sint
-                  mollit veniam commodo commodo minim in nulla sit labore et
-                  labore adipisicing quis adipisicing eiusmod mollit cupidatat
-                  veniam aliquip fugiat dolor quis aliquip pariatur nisi fugiat
-                  quis anim labore excepteur incididunt ut ut dolor nostrud
-                  dolore laborum velit sunt dolor consequat cillum excepteur.
+                  Kuwait Top List is the leading source of quality and accurate
+                  business information on everything Kuwait since 1995. We are
+                  the only business directory to profile all the major
+                  corporations of Kuwait and categorize a further 5000+ SMEs
+                  under 450 categories.
                 </p>
               </div>
             </div>
@@ -312,43 +316,29 @@
               <div class="col-md-12">
                 <div id="testimonial-carousel" class="owl-carousel owl-theme">
                   <blockquote class="testimonial-big text-dark">
-                    I'm always impressed with the services. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip.
-                    <img src="images/people/1.jpg" alt="" />
-                    <span class="name">John, Customer</span>
-                  </blockquote>
-
-                  <blockquote class="testimonial-big text-dark">
-                    I'm always impressed with the services. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip.
+                    <div>
+                      For over 10 years, Kuwait Top List have been my only
+                      source of reference for all major corporations in Kuwait.
+                    </div>
                     <img src="images/people/2.jpg" alt="" />
-                    <span class="name">Sandra, Customer</span>
+                    <span class="name">Rita Abboud, Kout Restaurants Co.</span>
                   </blockquote>
 
                   <blockquote class="testimonial-big text-dark">
-                    I'm always impressed with the services. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip.
-                    <img src="images/people/3.jpg" alt="" />
-                    <span class="name">Michael, Customer</span>
+                    <div>
+                      I cannot imagine any other souce of quality information on
+                      Kuwait business other than Kuwait Top List
+                    </div>
+                    <img src="images/people/1.jpg" alt="" />
+                    <span class="name">Jassim AlSharhan, Jet Motors Co.</span>
                   </blockquote>
 
                   <blockquote class="testimonial-big text-dark">
-                    I'm always impressed with the services. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip.
+                    <div>The #1 business directory in Kuwait. Absolutely!</div>
                     <img src="images/people/4.jpg" alt="" />
-                    <span class="name">George, Customer</span>
+                    <span class="name"
+                      >Khaled Al-Sultan, The Warehousing Co.</span
+                    >
                   </blockquote>
                 </div>
               </div>
@@ -366,84 +356,21 @@
               </div>
             </div>
 
-            <div class="row wow fadeInUp">
-              <div class="col-lg-4 col-md-6 mb30">
-                <div class="f-box f-icon-left f-icon-box">
-                  <i class="fa fa-laptop bg-white text-dark"></i>
-                  <div class="fb-text">
-                    <h4>Website Design</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt.
-                    </p>
+            <div class="row wow fadeInUp" x-data="data">
+              <template x-for="service in services" :key="service.icon">
+                <div class="col-lg-4 col-md-6 mb30">
+                  <div class="f-box f-icon-left f-icon-box">
+                    <i class="fa bg-white text-dark" :class="service.icon"></i>
+                    <div class="fb-text">
+                      <h4 x-text="service.name"></h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 mb30">
-                <div class="f-box f-icon-left f-icon-box">
-                  <i class="fa fa-paper-plane-o bg-white text-dark"></i>
-                  <div class="fb-text">
-                    <h4>Email Marketing</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 mb30">
-                <div class="f-box f-icon-left f-icon-box">
-                  <i class="fa fa-line-chart bg-white text-dark"></i>
-                  <div class="fb-text">
-                    <h4>Digital Analytics</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 mb30">
-                <div class="f-box f-icon-left f-icon-box">
-                  <i class="fa fa-object-group bg-white text-dark"></i>
-                  <div class="fb-text">
-                    <h4>Visual Editor</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 mb30">
-                <div class="f-box f-icon-left f-icon-box">
-                  <i class="fa fa-hdd-o bg-white text-dark"></i>
-                  <div class="fb-text">
-                    <h4>Backup &amp; Security</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 mb30">
-                <div class="f-box f-icon-left f-icon-box">
-                  <i class="fa fa-comments-o bg-white text-dark"></i>
-                  <div class="fb-text">
-                    <h4>IT Consultancy</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              </template>
             </div>
           </div>
         </section>
@@ -515,14 +442,17 @@
               <div class="spacer-single"></div>
 
               <div class="col-md-12 text-center">
-                <div id="submit">
+                <!-- <div id="submit">
                   <input
                     type="submit"
                     id="send_message"
                     value="Submit Form"
                     class="btn btn-custom text-dark"
                   />
-                </div>
+                </div> -->
+                <button type="submit" class="btn btn-custom text-dark">
+                  Submit Form
+                </button>
                 <div id="mail_success" class="success">
                   Your message has been sent successfully.
                 </div>
@@ -582,6 +512,38 @@
           }); // year, month (value-1), date, hour
         });
       });
+    </script>
+
+    <script>
+      const data = {
+        services: [
+          { icon: "fa-video-camera", name: "Media & Marketing" },
+          { icon: "fa-laptop", name: "Web and App Design" },
+          { icon: "fa-line-chart", name: "Business Training" },
+          { icon: "fa-camera-retro", name: "Corporate Photography" },
+          { icon: "fa-comments-o", name: "IT Consultancy" },
+          { icon: "fa-shopping-cart", name: "E-Commerce" },
+        ],
+        testimonials: [
+          {
+            details:
+              "For over 10 years, Kuwait Top List have been my only source of reference for all major corporations in Kuwait.",
+            image: "images/people/2.jpg",
+            name: "Rita Abboud, Kout Restaurants Co.",
+          },
+          {
+            details:
+              "I cannot imagine any other souce of quality information on Kuwait business other than Kuwait Top List.",
+            image: "images/people/1.jpg",
+            name: "Jassim AlSharhan, Jet Motors Co.",
+          },
+          {
+            details: "The #1 business directory in Kuwait. Absolutely!",
+            image: "images/people/4.jpg",
+            name: "Khaled Al-Sultan, The Warehousing Co.",
+          },
+        ],
+      };
     </script>
   </body>
 </html>
