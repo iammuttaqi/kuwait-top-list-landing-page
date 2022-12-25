@@ -363,10 +363,7 @@
                     <i class="fa bg-white text-dark" :class="service.icon"></i>
                     <div class="fb-text">
                       <h4 x-text="service.name"></h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt.
-                      </p>
+                      <p x-text="service.details"></p>
                     </div>
                   </div>
                 </div>
@@ -517,12 +514,42 @@
     <script>
       const data = {
         services: [
-          { icon: "fa-video-camera", name: "Media & Marketing" },
-          { icon: "fa-laptop", name: "Web and App Design" },
-          { icon: "fa-line-chart", name: "Business Training" },
-          { icon: "fa-camera-retro", name: "Corporate Photography" },
-          { icon: "fa-comments-o", name: "IT Consultancy" },
-          { icon: "fa-shopping-cart", name: "E-Commerce" },
+          {
+            icon: "fa-video-camera",
+            name: "Media & Marketing",
+            details:
+              "Custom marketing strategy and execution with focus on essential KPIs.",
+          },
+          {
+            icon: "fa-laptop",
+            name: "Web and App Design",
+            details:
+              "We design cutting edge websites and mobile apps that give you the advantage over your peers.",
+          },
+          {
+            icon: "fa-line-chart",
+            name: "Business Training",
+            details:
+              "Made from scratch sales, marketing and digital marketing training is our core competency.",
+          },
+          {
+            icon: "fa-camera-retro",
+            name: "Corporate Photography",
+            details:
+              "Looking for that professional photgrapher for your next photoshoot? We've got you covered.",
+          },
+          {
+            icon: "fa-comments-o",
+            name: "IT Consultancy",
+            details:
+              "Need to maintain your IT infrastructure? We provide full coverage from software to cloud server configuration.",
+          },
+          {
+            icon: "fa-shopping-cart",
+            name: "E-Commerce",
+            details:
+              "Develop your next ecommerce application and scale with us.",
+          },
         ],
         testimonials: [
           {
