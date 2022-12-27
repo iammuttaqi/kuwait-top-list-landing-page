@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kuwait Top list</title>
+    <meta
+      name="description"
+      content="A handbook of kuwaits major corporations."
+    />
+    <meta
+      name="keywords"
+      content="Kuwait, Kuwait business, Kuwait directory, Kuwait database, Kuwait business directory, Kuwait companies"
+    />
+    <meta name="author" content="Createx Studio" />
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo.png"" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png""
+    /> <link rel="icon" type="image/png" sizes="16x16"
+    href="assets/img/logo.png"" /> <link rel="mask-icon" color="#6366f1"
+    href="assets/img/logo.png"" />
+
+    <meta name="msapplication-TileColor" content="#080032" />
+    <meta
+      name="msapplication-config"
+      content="assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="white" />
+
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+      id="google-font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem("mode"),
+        root = document.getElementsByTagName("html")[0];
+      if (mode !== undefined && mode === "dark") {
+        root.classList.add("dark-mode");
+      } else {
+        root.classList.remove("dark-mode");
+      }
+    </script>
+
+    <style>
+      :root {
+        --ar-warning-rgb: 157, 139, 72;
+        --ar-success-rgb: ;
+        --ar-danger-rgb: 252, 0, 11;
+        --ar-danger: #fc000b;
+        --ar-primary: #0d6efd;
+        --ar-primary-rgb: 13, 110, 253;
+        --ar-link-color: #0d6efd;
+        --ar-link-hover-color: #0055e4;
+      }
+      .btn-primary {
+        --ar-btn-bg: #0d6efd;
+        --ar-btn-border-color: #0d6efd;
+        --ar-btn-hover-bg: #0055e4;
+        --ar-btn-hover-border-color: #0055e4;
+        --ar-btn-active-bg: #0055e4;
+        --ar-btn-active-border-color: #0055e4;
+        --ar-btn-disabled-bg: #0d6efd;
+        --ar-btn-disabled-border-color: #0d6efd;
+      }
+      .btn-warning {
+        --ar-btn-bg: #9d8b48;
+        --ar-btn-border-color: #9d8b48;
+        --ar-btn-hover-bg: #84722f;
+        --ar-btn-hover-border-color: #84722f;
+        --ar-btn-active-bg: #84722f;
+        --ar-btn-active-border-color: #84722f;
+        --ar-btn-disabled-bg: #9d8b48;
+        --ar-btn-disabled-border-color: #9d8b48;
+      }
+      .btn-success {
+        --ar-btn-bg: #16df19;
+        --ar-btn-border-color: #16df19;
+        --ar-btn-hover-bg: #00c600;
+        --ar-btn-hover-border-color: #00c600;
+        --ar-btn-active-bg: #00c600;
+        --ar-btn-active-border-color: #00c600;
+        --ar-btn-disabled-bg: #16df19;
+        --ar-btn-disabled-border-color: #16df19;
+      }
+      .btn-danger {
+        --ar-btn-bg: #fc000b;
+        --ar-btn-border-color: #fc000b;
+        --ar-btn-hover-bg: #e30000;
+        --ar-btn-hover-border-color: #e30000;
+        --ar-btn-active-bg: #e30000;
+        --ar-btn-active-border-color: #e30000;
+        --ar-btn-disabled-bg: #fc000b;
+        --ar-btn-disabled-border-color: #fc000b;
+      }
+      .btn-outline-primary {
+        --ar-btn-color: #0d6efd;
+        --ar-btn-border-color: #0d6efd;
+        --ar-btn-hover-bg: #0d6efd;
+        --ar-btn-hover-border-color: #0d6efd;
+        --ar-btn-active-bg: #0d6efd;
+        --ar-btn-active-border-color: #0d6efd;
+        --ar-btn-disabled-color: #0d6efd;
+        --ar-btn-disabled-border-color: #0d6efd;
+      }
+      .btn-outline-warning {
+        --ar-btn-color: #9d8b48;
+        --ar-btn-border-color: #9d8b48;
+        --ar-btn-hover-bg: #9d8b48;
+        --ar-btn-hover-border-color: #9d8b48;
+        --ar-btn-active-bg: #9d8b48;
+        --ar-btn-active-border-color: #9d8b48;
+        --ar-btn-disabled-color: #9d8b48;
+        --ar-btn-disabled-border-color: #9d8b48;
+      }
+      .btn-outline-success {
+        --ar-btn-color: #16df19;
+        --ar-btn-border-color: #16df19;
+        --ar-btn-hover-bg: #16df19;
+        --ar-btn-hover-border-color: #16df19;
+        --ar-btn-active-bg: #16df19;
+        --ar-btn-active-border-color: #16df19;
+        --ar-btn-disabled-color: #16df19;
+        --ar-btn-disabled-border-color: #16df19;
+      }
+      .btn-outline-danger {
+        --ar-btn-color: #fc000b;
+        --ar-btn-border-color: #fc000b;
+        --ar-btn-hover-bg: #fc000b;
+        --ar-btn-hover-border-color: #fc000b;
+        --ar-btn-active-bg: #fc000b;
+        --ar-btn-active-border-color: #fc000b;
+        --ar-btn-disabled-color: #fc000b;
+        --ar-btn-disabled-border-color: #fc000b;
+      }
+    </style>
+
+    <style>
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="navbar navbar-expand-lg bg-dark">
+      <div class="container">
+        <a class="navbar-brand pe-sm-3" href="index.html">
+          <img
+            src="assets/img/logo.png"
+            class="w-50 flex-shrink-0 me-2"
+            alt="Logo"
+        /></a>
+
+        <div class="d-none d-lg-flex order-lg-2 ms-auto">
+          <a href="#" class="text-decoration-none px-2">
+            <i class="ai-facebook fs-lg"></i>
+          </a>
+          <a href="#" class="text-decoration-none px-2">
+            <i class="ai-twitter fs-lg"></i>
+          </a>
+          <a href="#" class="text-decoration-none px-2">
+            <i class="ai-linkedin fs-lg"></i>
+          </a>
+          <a href="#" class="text-decoration-none px-2">
+            <i class="ai-instagram fs-lg"></i>
+          </a>
+        </div>
+
+        <button
+          class="navbar-toggler ms-sm-3"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about-section">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services-section">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials-section">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-section">Contact</a>
+            </li>
+          </ul>
+
+          <div class="d-sm-none p-3 mt-n3">
+            <div
+              class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto"
+              data-bs-toggle="mode"
+            >
+              <input class="form-check-input" type="checkbox" id="theme-mode" />
+              <label class="form-check-label" for="theme-mode"
+                ><i class="ai-sun fs-lg"></i
+              ></label>
+              <label class="form-check-label" for="theme-mode"
+                ><i class="ai-moon fs-lg"></i
+              ></label>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page wrapper-->
+    <main class="page-wrapper" x-data="data">
+      <!-- Hero-->
+      <section class="bg-dark position-relative py-5">
+        <div
+          class="d-none d-dark-mode-block position-absolute top-0 start-0 w-100 h-100"
+          style="background-color: rgba(255, 255, 255, 0.02)"
+        ></div>
+        <div class="container dark-mode position-relative zindex-2">
+          <div class="row gap-4 text-center">
+            <div class="col-12 col-sm-6 offset-sm-3">
+              <div class="d-flex justify-content-between text-center">
+                <div>
+                  <h1 class="mb-1">403</h1>
+                  <span>Days</span>
+                </div>
+                <div>
+                  <h1 class="mb-1">04</h1>
+                  <span>Hours</span>
+                </div>
+                <div>
+                  <h1 class="mb-1">29</h1>
+                  <span>Minutes</span>
+                </div>
+                <div>
+                  <h1 class="mb-1">56</h1>
+                  <span>Seconds</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 offset-sm-3">
+              <div class="py-2 py-sm-3">
+                <h1 class="display-5 text-danger m-0">KUWAIT TOP LIST</h1>
+                <p class="m-0">A HANDBOOK OF KUWAIT'S MAJOR CORPORATIONS</p>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 offset-sm-3">
+              <div class="py-2 py-sm-3">
+                <div class="d-grid">
+                  <button class="btn btn-danger rounded-0 fs-1 py-1 px-0">
+                    BACK TO BUSINESS
+                  </button>
+                </div>
+                <div class="mt-3 text-white fw-bold px-lg-5">
+                  Welcome to the 26th edition of Kuwait Top List. For 26 years,
+                  we've defined the very best in Kuwaiti business.
+                </div>
+                <div class="mt-5">
+                  &copy; AMI Middle East LLC. All Rights Reserved. 1995 - 2023.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About-->
+      <section id="about-section" class="container position-relative zindex-3">
+        <div class="row py-5 my-n2 my-sm-0 my-md-2 my-lg-4 my-xl-5">
+          <div class="col-12">
+            <div class="fs-sm text-uppercase mb-3">About Us</div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <h2 class="display-6 bg-primary text-white p-3 fs-1">
+              Defining the Kuwaiti business landscape for over 2 decades.
+            </h2>
+          </div>
+          <div class="col-12 col-sm-6">
+            <p class="fs-xl">
+              Kuwait Top List is the leading source of quality and accurate
+              business information on everything Kuwait since 1995. We are the
+              only business directory to profile all the major corporations of
+              Kuwait and categorize a further 5000+ SMEs under 450 categories.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services-->
+      <section id="services-section" class="bg-secondary py-5">
+        <div
+          class="container py-3 py-sm-4 py-lg-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5"
+        >
+          <div class="fs-sm text-uppercase mb-3 mt-xl-2 mt-xxl-3">
+            Work with us
+          </div>
+          <h2 class="h1 pb-3 mb-lg-4">Our services</h2>
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 pb-xl-2 pb-xxl-3"
+          >
+            <template x-for="service in services" :key="service.icon">
+              <!-- Item-->
+              <div class="col">
+                <div class="card h-100 border-0 rounded-5">
+                  <div class="card-body pb-3">
+                    <i
+                      class="bg-white text-primary d-block mt-1 mt-sm-0 mb-4 fs-1 bi"
+                      :class="service.icon"
+                    ></i>
+                    <h3 class="h4" x-text="service.name"></h3>
+                    <p class="mb-0" x-text="service.details"></p>
+                  </div>
+                  <div class="card-footer border-0 pt-3 mb-3">
+                    <a
+                      class="btn btn-icon btn-lg btn-outline-primary rounded-circle stretched-link"
+                      href="#"
+                      ><i class="ai-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials-->
+      <section
+        id="testimonials-section"
+        class="py-5 my-1 my-sm-2 my-xl-4 my-xxl-5"
+      >
+        <div class="container py-3 py-md-4 py-lg-5 my-xl-2 my-xxl-3">
+          <div class="fs-sm text-uppercase mb-3">Testimonials</div>
+          <h2 class="display-6 pb-3 mb-lg-4">What our clients say</h2>
+
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 pb-xl-2 pb-xxl-3"
+          >
+            <template x-for="(testimonial, i) in testimonials" :key="i">
+              <div class="col">
+                <div class="card h-100 border-0 rounded-5 bg-gray">
+                  <div class="card-body pb-3">
+                    <img
+                      :src="testimonial.image"
+                      class="d-block rounded-circle mb-3"
+                      width="86"
+                      alt=""
+                    />
+                    <h4 class="mb-0" x-text="testimonial.name"></h4>
+                    <p
+                      class="fs-lg text-muted mb-0"
+                      x-text="testimonial.designation"
+                    ></p>
+                    <p class="mt-2" x-text="testimonial.details"></p>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact-->
+      <section
+        id="contact-section"
+        class="bg-secondary py-5 my-1 my-sm-2 my-xl-4 my-xxl-5"
+      >
+        <div class="container py-3 py-md-4 py-lg-5 my-xl-2 my-xxl-3">
+          <div class="fs-sm text-uppercase mb-3">Contact Us</div>
+          <h2 class="display-6 pb-3 mb-lg-4">Feel free to contact us</h2>
+
+          <form action="">
+            <div class="row g-4 pb-xl-2 pb-xxl-3">
+              <div class="col-12 col-sm-6">
+                <div class="mb-3">
+                  <label class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control bg-white rounded-1"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control bg-white rounded-1"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Phone</label>
+                  <input
+                    type="tel"
+                    class="form-control bg-white rounded-1"
+                    placeholder="Phone"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="mb-3">
+                  <label class="form-label">Your Message</label>
+                  <textarea
+                    class="form-control bg-white rounded-1"
+                    rows="7"
+                    placeholder="Your Message"
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary rounded-1">
+                      Submit Form
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer bg-dark position-relative py-3">
+      <div class="dark-mode container">
+        <p class="fs-sm m-0">
+          <span class="opacity-70"
+            >&copy; AMI Middle East LLC. All Rights Reserved. 1995 - 2023.
+          </span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to top button-->
+    <a
+      href="https://api.whatsapp.com/send?phone=96566806940"
+      target="_blank"
+      class="position-fixed fs-1"
+      style="bottom: 1rem; right: 1rem"
+    >
+      <i class="bi bi-whatsapp" style="color: #16df19"></i>
+    </a>
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- Main theme script-->
+    <script src="assets/js/theme.min.js"></script>
+
+    <script>
+      const data = {
+        services: [
+          {
+            icon: "bi-camera-reels",
+            name: "Media & Marketing",
+            details:
+              "Custom marketing strategy and execution with focus on essential KPIs.",
+          },
+          {
+            icon: "bi-laptop",
+            name: "Web and App Design",
+            details:
+              "We design cutting edge websites and mobile apps that give you the advantage over your peers.",
+          },
+          {
+            icon: "bi-bar-chart-line",
+            name: "Business Training",
+            details:
+              "Made from scratch sales, marketing and digital marketing training is our core competency.",
+          },
+          {
+            icon: "bi bi-camera",
+            name: "Corporate Photography",
+            details:
+              "Looking for that professional photgrapher for your next photoshoot? We've got you covered.",
+          },
+          {
+            icon: "bi bi-receipt",
+            name: "IT Consultancy",
+            details:
+              "Need to maintain your IT infrastructure? We provide full coverage from software to cloud server configuration.",
+          },
+          {
+            icon: "bi-bag",
+            name: "E-Commerce",
+            details:
+              "Develop your next ecommerce application and scale with us.",
+          },
+        ],
+
+        testimonials: [
+          {
+            details:
+              "For over 10 years, Kuwait Top List have been my only source of reference for all major corporations in Kuwait.",
+            image: "assets/img/avatar/21.jpg",
+            name: "Rita Abboud",
+            designation: "Kout Restaurants Co.",
+          },
+          {
+            details:
+              "I cannot imagine any other souce of quality information on Kuwait business other than Kuwait Top List.",
+            image: "assets/img/avatar/16.jpg",
+            name: "Jassim AlSharhan",
+            designation: "Jet Motors Co.",
+          },
+          {
+            details: "The #1 business directory in Kuwait. Absolutely!",
+            image: "assets/img/avatar/18.jpg",
+            name: "Khaled Al-Sultan",
+            designation: "The Warehousing Co.",
+          },
+        ],
+      };
+    </script>
+  </body>
+</html>
