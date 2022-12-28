@@ -113,6 +113,7 @@
         --ar-btn-disabled-bg: #fc000b;
         --ar-btn-disabled-border-color: #fc000b;
       }
+
       .btn-outline-primary {
         --ar-btn-color: #0d6efd;
         --ar-btn-border-color: #0d6efd;
@@ -160,133 +161,149 @@
       body {
         scroll-behavior: smooth;
       }
+      .navbar-toggler-icon,
+      .navbar-toggler-icon::before,
+      .navbar-toggler-icon::after {
+        background-color: #fff;
+      }
+      .bg-danger-hover {
+        background-color: #bd0303;
+      }
     </style>
   </head>
 
   <body>
-    <header class="navbar navbar-expand-lg bg-dark">
-      <div class="container">
-        <a class="navbar-brand pe-sm-3" href="index.html">
-          <img
-            src="assets/img/logo.png"
-            class="w-50 flex-shrink-0 me-2"
-            alt="Logo"
-        /></a>
+    <main
+      class="page-wrapper"
+      x-data="data"
+      x-init="setInterval(() => { btb = !btb }, 300);"
+    >
+      <div
+        style="
+          background-image: url('assets/img/kuwait.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+        "
+      >
+        <header class="navbar navbar-expand-lg">
+          <div class="container">
+            <a class="navbar-brand pe-sm-3" href="index.html">
+              <img
+                src="assets/img/logo.png"
+                class="w-50 flex-shrink-0 me-2"
+                alt="Logo"
+            /></a>
 
-        <div class="d-none d-lg-flex order-lg-2 ms-auto">
-          <a href="#" class="text-decoration-none px-2">
-            <i class="ai-facebook fs-lg"></i>
-          </a>
-          <a href="#" class="text-decoration-none px-2">
-            <i class="ai-twitter fs-lg"></i>
-          </a>
-          <a href="#" class="text-decoration-none px-2">
-            <i class="ai-linkedin fs-lg"></i>
-          </a>
-          <a href="#" class="text-decoration-none px-2">
-            <i class="ai-instagram fs-lg"></i>
-          </a>
-        </div>
+            <div class="d-none d-lg-flex order-lg-2 ms-auto">
+              <a href="#" class="text-decoration-none px-2">
+                <i class="text-danger ai-facebook fs-lg"></i>
+              </a>
+              <a href="#" class="text-decoration-none px-2">
+                <i class="text-danger ai-twitter fs-lg"></i>
+              </a>
+              <a href="#" class="text-decoration-none px-2">
+                <i class="text-danger ai-linkedin fs-lg"></i>
+              </a>
+              <a href="#" class="text-decoration-none px-2">
+                <i class="text-danger ai-instagram fs-lg"></i>
+              </a>
+            </div>
 
-        <button
-          class="navbar-toggler ms-sm-3"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <nav class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav navbar-nav-scroll me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about-section">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#services-section">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#testimonials-section">Testimonials</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact-section">Contact</a>
-            </li>
-          </ul>
-
-          <div class="d-sm-none p-3 mt-n3">
-            <div
-              class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto"
-              data-bs-toggle="mode"
+            <button
+              class="navbar-toggler ms-sm-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
             >
-              <input class="form-check-input" type="checkbox" id="theme-mode" />
-              <label class="form-check-label" for="theme-mode"
-                ><i class="ai-sun fs-lg"></i
-              ></label>
-              <label class="form-check-label" for="theme-mode"
-                ><i class="ai-moon fs-lg"></i
-              ></label>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav
+              class="navbar-dark bg-dark navbar-collapse collapse"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav navbar-nav-scroll me-auto">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#about-section">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#services-section"
+                    >Services</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#testimonials-section"
+                    >Testimonials</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#contact-section"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <section class="position-relative py-5">
+          <div class="container dark-mode position-relative zindex-2">
+            <div class="row gap-4 text-center">
+              <div class="col-12 col-sm-6 offset-sm-3">
+                <div
+                  class="d-flex justify-content-between text-center"
+                  x-data="timer(new Date('January 1, 2024 00:00:00').getTime())"
+                >
+                  <div>
+                    <h1 class="mb-1" x-text="time().days"></h1>
+                    <span>Days</span>
+                  </div>
+                  <div>
+                    <h1 class="mb-1" x-text="time().hours"></h1>
+                    <span>Hours</span>
+                  </div>
+                  <div>
+                    <h1 class="mb-1" x-text="time().minutes"></h1>
+                    <span>Minutes</span>
+                  </div>
+                  <div>
+                    <h1 class="mb-1" x-text="time().seconds"></h1>
+                    <span>Seconds</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 offset-sm-3">
+                <div class="py-2 py-sm-3">
+                  <h1 class="display-5 text-danger m-0">KUWAIT TOP LIST</h1>
+                  <p class="m-0">A HANDBOOK OF KUWAIT'S MAJOR CORPORATIONS</p>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 offset-sm-3">
+                <div class="py-2 py-sm-3">
+                  <div class="d-grid">
+                    <h3
+                      class="rounded-0 fs-1 py-1 px-0"
+                      x-bind:class="btb ? 'bg-danger' : 'bg-danger-hover'"
+                      x-transition.duration.300ms
+                    >
+                      BACK TO BUSINESS
+                    </h3>
+                  </div>
+                  <div class="mt-3 text-white fw-bold px-lg-5">
+                    Welcome to the 26th edition of Kuwait Top List. For 26
+                    years, we've defined the very best in Kuwaiti business.
+                  </div>
+                  <div class="mt-5 text-light form-text">
+                    &copy; AMI Middle East LLC. All Rights Reserved. 1995 -
+                    2023.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </nav>
+        </section>
       </div>
-    </header>
-
-    <!-- Page wrapper-->
-    <main class="page-wrapper" x-data="data">
-      <!-- Hero-->
-      <section class="bg-dark position-relative py-5">
-        <div
-          class="d-none d-dark-mode-block position-absolute top-0 start-0 w-100 h-100"
-          style="background-color: rgba(255, 255, 255, 0.02)"
-        ></div>
-        <div class="container dark-mode position-relative zindex-2">
-          <div class="row gap-4 text-center">
-            <div class="col-12 col-sm-6 offset-sm-3">
-              <div class="d-flex justify-content-between text-center">
-                <div>
-                  <h1 class="mb-1">403</h1>
-                  <span>Days</span>
-                </div>
-                <div>
-                  <h1 class="mb-1">04</h1>
-                  <span>Hours</span>
-                </div>
-                <div>
-                  <h1 class="mb-1">29</h1>
-                  <span>Minutes</span>
-                </div>
-                <div>
-                  <h1 class="mb-1">56</h1>
-                  <span>Seconds</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12 col-sm-6 offset-sm-3">
-              <div class="py-2 py-sm-3">
-                <h1 class="display-5 text-danger m-0">KUWAIT TOP LIST</h1>
-                <p class="m-0">A HANDBOOK OF KUWAIT'S MAJOR CORPORATIONS</p>
-              </div>
-            </div>
-
-            <div class="col-12 col-sm-6 offset-sm-3">
-              <div class="py-2 py-sm-3">
-                <div class="d-grid">
-                  <button class="btn btn-danger rounded-0 fs-1 py-1 px-0">
-                    BACK TO BUSINESS
-                  </button>
-                </div>
-                <div class="mt-3 text-white fw-bold px-lg-5">
-                  Welcome to the 26th edition of Kuwait Top List. For 26 years,
-                  we've defined the very best in Kuwaiti business.
-                </div>
-                <div class="mt-5">
-                  &copy; AMI Middle East LLC. All Rights Reserved. 1995 - 2023.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- About-->
       <section id="about-section" class="container position-relative zindex-3">
@@ -470,8 +487,8 @@
     <!-- Main theme script-->
     <script src="assets/js/theme.min.js"></script>
 
-    <script>
-      const data = {
+    <script type="text/javascript">
+      let data = {
         services: [
           {
             icon: "bi-camera-reels",
@@ -533,7 +550,60 @@
             designation: "The Warehousing Co.",
           },
         ],
+
+        btb: false,
       };
+
+      function timer(expiry) {
+        return {
+          expiry: expiry,
+          remaining: null,
+          init() {
+            this.setRemaining();
+            setInterval(() => {
+              this.setRemaining();
+            }, 1000);
+          },
+          setRemaining() {
+            const diff = this.expiry - new Date().getTime();
+            this.remaining = parseInt(diff / 1000);
+          },
+          days() {
+            return {
+              value: this.remaining / 86400,
+              remaining: this.remaining % 86400,
+            };
+          },
+          hours() {
+            return {
+              value: this.days().remaining / 3600,
+              remaining: this.days().remaining % 3600,
+            };
+          },
+          minutes() {
+            return {
+              value: this.hours().remaining / 60,
+              remaining: this.hours().remaining % 60,
+            };
+          },
+          seconds() {
+            return {
+              value: this.minutes().remaining,
+            };
+          },
+          format(value) {
+            return parseInt(value);
+          },
+          time() {
+            return {
+              days: this.format(this.days().value),
+              hours: this.format(this.hours().value),
+              minutes: this.format(this.minutes().value),
+              seconds: this.format(this.seconds().value),
+            };
+          },
+        };
+      }
     </script>
   </body>
 </html>
